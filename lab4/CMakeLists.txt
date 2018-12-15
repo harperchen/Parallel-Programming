@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project( lab4 )
+find_package( OpenCV REQUIRED )
+add_executable( lab4 lab4.cpp )
+target_link_libraries( lab4 ${OpenCV_LIBS} )
+set(CMAKE_C_COMPILER mpicc)
+set(CMAKE_CXX_COMPILER mpicxx)
+target_link_libraries( lab4 mpi )
